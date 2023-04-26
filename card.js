@@ -13,6 +13,16 @@ class Card
 		 */
 		this.element = cardPrefab.cloneNode(true)
 		playArea.appendChild(this.element)
+
+		/**
+		 * @type {HTMLElement}
+		 */
+		this.face = this.element.getElementsByClassName('face')[0]
+
+		/**
+		 * @type {HTMLElement}
+		 */
+		this.item = null
 	}
 
 	/**
@@ -69,5 +79,29 @@ class Card
 	set colors(colors)
 	{
 		this.element.style.background = colors.length > 1 ? `linear-gradient(${colors.join(', ')})` : colors[0]
+	}
+
+	/**
+	 * @param {HTMLElement} item
+	 */
+	captchaItem(item)
+	{
+		if (this.item) this.fetchItem()
+
+		this.item = item
+		this.face.appendChild(item)
+	}
+
+	/**
+	 * @type {HTMLElement}
+	 */
+	fetchItem()
+	{
+		if (!this.item) return null
+
+		const item = this.item
+		this.item = null
+		item.remove()
+		return item
 	}
 }

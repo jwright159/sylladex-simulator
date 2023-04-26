@@ -7,7 +7,7 @@ class StackModus extends Modus
 	{
 		const spacing = 10
 		const width = cards.reduce((current, card) => current + card.width + spacing, 0) - spacing
-
+		
 		let x = -width/2
 		
 		cards.forEach((card) => {
@@ -22,13 +22,24 @@ class StackModus extends Modus
 
 	/**
 	 * @param {Card[]} cards
+	 * @param {HTMLElement} item
+	 */
+	captchaItem(cards, item)
+	{
+		const card = cards.pop()
+		cards.unshift(card)
+		card.captchaItem(item)
+	}
+
+	/**
+	 * @param {Card[]} cards
 	 * @param {Card} card
 	 */
 	flushCard(cards, card)
 	{
 		cards.push(card)
 	}
-
+	
 	/**
 	 * @type {string[]}
 	 */

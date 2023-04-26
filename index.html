@@ -6,19 +6,21 @@
 	</head>
 
 	<body>
-		<!-- div id="controls">
-			<button>Add card</button>
-			<button>Captcha PGO</button>
-			<select name="cars" id="cars">
+		<div id="controls">
+			<button onclick="flushCard()">Add card</button>
+			<button onclick="captchaItem()">Captcha PGO</button>
+			<select id="modus-picker">
 				<option value="stack">Stack Modus</option>
 			</select>
-		</div -->
+		</div>
 
 		<div id="play-area"></div>
 
 		<div id="card-prefab" class="card">
 			<div class="face"></div>
 		</div>
+
+		<div id="item-prefab" class="item"></div>
 		
 		<script src="card.js"></script>
 		<script src="modus.js"></script>

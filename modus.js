@@ -12,6 +12,12 @@ class Modus
 
 	/**
 	 * @param {Card[]} cards
+	 * @param {HTMLElement} item
+	 */
+	captchaItem(cards, item) { throw new Error('Abstract method: flushCard') }
+
+	/**
+	 * @param {Card[]} cards
 	 * @param {Card} card
 	 */
 	flushCard(cards, card) { throw new Error('Abstract method: flushCard') }
