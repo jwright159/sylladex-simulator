@@ -1,4 +1,20 @@
 .card {
-	width: 822px;
-	height: 1122px;
+	border: 2px solid black;
+	background-color: red;
+	width: 8.22em;
+	height: 11.22em;
+	position: absolute;
+}
+
+.card .face {
+	background-color: white;
+	width: calc(100% - 2em);
+	height: calc(100% - 2em);
+	margin: 1em;
+}
+
+#play-area {
+	border: 2px solid black;
+	height: 40em;
+	position: relative;
 }
