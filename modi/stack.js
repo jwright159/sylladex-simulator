@@ -22,6 +22,15 @@ class StackModus extends Modus
 
 	/**
 	 * @param {Card[]} cards
+	 * @param {Card} card
+	 */
+	canFetchCard(cards, card)
+	{
+		return cards[0] === card
+	}
+
+	/**
+	 * @param {Card[]} cards
 	 * @param {HTMLElement} item
 	 */
 	captchaItem(cards, item)
@@ -39,7 +48,7 @@ class StackModus extends Modus
 	{
 		cards.push(card)
 	}
-	
+
 	/**
 	 * @type {string[]}
 	 */

@@ -104,4 +104,15 @@ class Card
 		item.remove()
 		return item
 	}
+
+	/**
+	 * @param {boolean} fetchable
+	 */
+	set fetchable(fetchable)
+	{
+		if (fetchable && !this.element.classList.contains('fetchable'))
+			this.element.classList.add('fetchable')
+		else if (!fetchable && this.element.classList.contains('fetchable'))
+			this.element.classList.remove('fetchable')
+	}
 }

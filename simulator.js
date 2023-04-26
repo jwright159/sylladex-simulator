@@ -35,6 +35,7 @@ function loop(time)
 
 	cards.forEach(card =>
 	{
+		card.fetchable = modus.canFetchCard(cards, card)
 		card.x += playArea.offsetWidth / 2
 		card.y += playArea.offsetHeight / 2
 	})

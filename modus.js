@@ -12,9 +12,15 @@ class Modus
 
 	/**
 	 * @param {Card[]} cards
+	 * @param {Card} card
+	 */
+	canFetchCard(cards, card) { throw new Error('Abstract method: canFetch') }
+
+	/**
+	 * @param {Card[]} cards
 	 * @param {HTMLElement} item
 	 */
-	captchaItem(cards, item) { throw new Error('Abstract method: flushCard') }
+	captchaItem(cards, item) { throw new Error('Abstract method: captchaItem') }
 
 	/**
 	 * @param {Card[]} cards
