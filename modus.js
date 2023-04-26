@@ -26,6 +26,12 @@ class Modus
 	 * @param {Card[]} cards
 	 * @param {Card} card
 	 */
+	fetchItem(cards, card) { throw new Error('Abstract method: fetchItem') }
+
+	/**
+	 * @param {Card[]} cards
+	 * @param {Card} card
+	 */
 	flushCard(cards, card) { throw new Error('Abstract method: flushCard') }
 
 	/**

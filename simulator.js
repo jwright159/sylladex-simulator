@@ -23,6 +23,16 @@ function captchaItem()
 	modus.captchaItem(cards, item)
 }
 
+/**
+ * @param {HTMLElement} cardElement
+ */
+function fetchItem(cardElement)
+{
+	const card = cards.find(card => card.hasElement(cardElement))
+	if (!modus.canFetchCard(cards, card)) return
+	modus.fetchItem(cards, card)
+}
+
 
 const INITIAL_CARD_COUNT = 5
 for (let i = 0; i < INITIAL_CARD_COUNT; i++)

@@ -115,4 +115,12 @@ class Card
 		else if (!fetchable && this.element.classList.contains('fetchable'))
 			this.element.classList.remove('fetchable')
 	}
+
+	/**
+	 * @param {HTMLElement} cardElement
+	 */
+	hasElement(cardElement)
+	{
+		return this.element === cardElement
+	}
 }

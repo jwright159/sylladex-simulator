@@ -42,6 +42,17 @@ class StackModus extends Modus
 
 	/**
 	 * @param {Card[]} cards
+	 * @param {HTMLElement} item
+	 */
+	fetchItem(cards, item)
+	{
+		const card = cards.shift()
+		cards.push(card)
+		card.fetchItem(item)
+	}
+
+	/**
+	 * @param {Card[]} cards
 	 * @param {Card} card
 	 */
 	flushCard(cards, card)
