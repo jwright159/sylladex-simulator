@@ -19,6 +19,23 @@ class StackModus extends Modus
 			x += card.width / 2 + spacing
 		});
 	}
+
+	/**
+	 * @param {Card[]} cards
+	 * @param {Card} card
+	 */
+	flushCard(cards, card)
+	{
+		cards.push(card)
+	}
+
+	/**
+	 * @type {string[]}
+	 */
+	get colors()
+	{
+		return ['deeppink']
+	}
 }
 
 modi.push(new StackModus())

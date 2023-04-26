@@ -1,12 +1,18 @@
+const modus = modi[0]
+
+/**
+ * @type {Card[]}
+ */
 const cards = []
 
 for (let i = 0; i < 5; i++)
 {
 	const card = new Card()
-	cards.push(card)
+	modus.flushCard(cards, card)
+	card.colors = modus.colors
 }
 
-modi[0].layout(cards)
+modus.layout(cards)
 
 cards.forEach(card =>
 {

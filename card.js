@@ -62,4 +62,12 @@ class Card
 	{
 		return this.element.offsetHeight
 	}
+
+	/**
+	 * @param {string[]} colors
+	 */
+	set colors(colors)
+	{
+		this.element.style.background = colors.length > 1 ? `linear-gradient(${colors.join(', ')})` : colors[0]
+	}
 }
